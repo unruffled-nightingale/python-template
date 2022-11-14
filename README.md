@@ -1,4 +1,4 @@
-![Alt Text](./.docs/static/title_image.png)
+![Alt Text](./docs/static/title_image.png)
 
 
 ### A template for building a python project in 2022.

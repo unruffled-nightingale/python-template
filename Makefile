@@ -7,7 +7,7 @@ update:
 start:
 	python main.py
 
-test-all:test-integration test-unit
+test-all: test-integration test-unit
 
 test-unit:
 	pytest tests/unit -v --cov-config pyproject.toml --cov
