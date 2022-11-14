@@ -1,5 +1,5 @@
-def main() -> None:
-    assert True
+def main() -> str:
+    return "Hello World!"
 
 
 if __name__ == "__main__":

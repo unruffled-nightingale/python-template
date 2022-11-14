@@ -2,4 +2,4 @@ from python_template import main
 
 
 def test_main() -> None:
-    main.main()
+    assert main.main() == "Hello World!"
