@@ -1,12 +1,18 @@
 [tool.poetry]
-name = "python_template"
+name = "language-wallpaper"
 version = "0.1.0"
-description = "A simple starter for a python project"
+description = "Updates your desktop backgound daily with a phrase and its translation"
 authors = ["unruffled-nightingale <unruffled.nightingale@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 toml = "~0.10"
+requests ="~2.27.1"
+pillow = "~9.1.1"
+bs4 = "~0.0.1"
+beautifulsoup4="~4.11.1"
+verbecc="~1.7.1"
+
 
 [tool.poetry.dev-dependencies]
 bandit = "*"
@@ -27,7 +33,6 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
-# https://pycqa.github.io/isort/docs/configuration/options.html
 line_length = 120
 use_parentheses = "True"
 
@@ -36,20 +41,15 @@ max-line-length = 120
 exclude = "venv,.venv,.git,__pycache__,build,dist"
 
 [tool.pytest.ini_options]
-# https://flake8.pycqa.org/en/latest/user/options.html#configuration-options
-# https://docs.pytest.org/en/6.2.x/reference.html#command-line-flags
 addopts = "-ra -v"
 
 [tool.coverage.report]
-# https://coverage.readthedocs.io/en/latest/config.html#report
 show_missing = true
 
 [tool.coverage.run]
-# https://coverage.readthedocs.io/en/latest/config.html#run
 omit = ["./tests/*"]
 
 [tool.mypy]
-# https://mypy.readthedocs.io/en/stable/config_file.html
 disallow_any_unimported = "True"
 disallow_any_generics = "True"
 disallow_incomplete_defs = "True"

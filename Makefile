@@ -4,17 +4,21 @@ install:
 update:
 	poetry update
 
-start:
-	python main.py
+schedule-mac:
+	sh ./scripts/schedule-mac.sh
 
-test-all:test-integration test-unit
+run-mac:
+	sh ./scripts/run-mac.sh
+
+build-french-data:
+	python -c "from language_wallpaper.main import build_language_data; build_language_data('french')"
+
+run-french-wallpaper:
+	python -c "from  language_wallpaper.main import run; run('french')"
 
 test-unit:
 	pytest tests/unit -v --cov-config pyproject.toml --cov
 	coverage xml --fail-under 90
-
-test-integration:
-	pytest tests/integration -v --cov-config pyproject.toml
 
 check-all: check-poetry check-lint check-mypy check-bandit check-private-keys check-format
 
